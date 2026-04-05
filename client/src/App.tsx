@@ -1,4 +1,3 @@
-import React from 'react'
 import { Routes ,Route, useLocation} from 'react-router-dom'
 import Home from './pages/Home'
 import Pricing from './pages/Pricing'
@@ -10,7 +9,7 @@ import View from './pages/View'
 import NavBar from './components/NavBar'
 import { Toaster } from "sonner"
 import AuthPage from './pages/auth/AuthPage'
-import Settings from './pages/settings'
+import Settings from './pages/Settings'
 import Loading from './pages/Loading'
 const App = () => {
   const {pathname} = useLocation()

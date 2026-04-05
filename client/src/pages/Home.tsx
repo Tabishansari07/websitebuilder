@@ -28,10 +28,16 @@ const Home = () => {
 
       navigate(`/projects/${data.projectId}`)
 
-      } catch (error:any) {
-        setLoading(false)
-        toast.error(error?.response?.data?.message || error.message);
-        console.log(error)
+     } catch (error) {
+        setLoading(false);
+
+        const err = error as any;
+
+        toast.error(
+          err?.response?.data?.message || err?.message || "Something went wrong"
+        );
+
+        console.log(err);
       }
     
 
