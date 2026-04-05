@@ -17,7 +17,7 @@ interface EditorPanelProps {
   onUpdate: (updates: any) => void;
   onClose: () => void;
 }
-const EditorPanel = ({selectedElement,onUpdate,onClose}) => {
+const EditorPanel = ({selectedElement,onUpdate,onClose}:EditorPanelProps) => {
     const [values,setValues] = useState(selectedElement)
   useEffect(() => {
   setValues(selectedElement)

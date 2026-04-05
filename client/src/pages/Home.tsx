@@ -28,7 +28,7 @@ const Home = () => {
 
       navigate(`/projects/${data.projectId}`)
 
-      } catch (error) {
+      } catch (error:any) {
         setLoading(false)
         toast.error(error?.response?.data?.message || error.message);
         console.log(error)
